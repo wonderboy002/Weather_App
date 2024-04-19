@@ -25,6 +25,7 @@ const Search = (props) => {
       .get(`${baseUrl}q=${city}&appid=${apiKey}`)
       .then((response) => {
         props.setData(response.data);
+        alert(`Successfully fetched weather details for : ${city} `)
       })
       .catch((error) => {
         alert("Something went wrong!!!");
