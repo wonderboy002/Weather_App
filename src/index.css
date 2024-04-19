@@ -26,10 +26,12 @@ body{
   flex-direction: column;
   align-items: center;
   border: 1px solid white;
-  padding: 3rem;
+  padding: 2.1rem;
+  gap: 0.4rem;
   border-radius: 30px;
-  transition: all 0.8s ease-in-out;
+  transition: all 2s ease-in-out;
   box-shadow: 1px 1px 4px 5px white;
+  /* transition: 2s all; */
 }
 
 input.cityName{
@@ -57,3 +59,31 @@ input.cityName{
   color: black;
   background-color: white;
 }
+
+.weatherData{
+  margin-top: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+
+.main{
+  max-width: 300px;
+  max-height: 800px;
+}
+
+.wind,.temp,.mainT,.feelslike{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+p{font-size: 12px;}

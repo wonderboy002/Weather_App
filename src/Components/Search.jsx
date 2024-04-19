@@ -2,9 +2,17 @@ import React, { useEffect, useState } from "react";
 import { FaSearch } from "react-icons/fa";
 import axios from "axios";
 import WeatherData from "./WeatherData";
-const baseUrl = "https://api.openweathermap.org/data/2.5/weather?";
-const apiKey = "1fdbc6ff2a8853e3d647783ff8f9c4cd";
+
+const baseUrl = import.meta.env.VITE_BASE_URL;
+// const apiKey = "1fdbc6ff2a8853e3d647783ff8f9c4cd";
+const apiKey = import.meta.env.VITE_API_KEY;
+
+
 const Search = (props) => {
+  useEffect(()=>{
+    console.log("this is the api key",apiKey);
+    console.log("This is the base url",baseUrl);
+  })
   const [city, setCity] = useState("");
   // const [weather, setWeather] = useState(null);
   useEffect(() => {
